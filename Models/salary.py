@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
 #  Using dataset https://www.kaggle.com/ashok4kaggle/salary-prediction-with-sklearn
-df = pd.read_csv("Salary-Prediction---Linear-Regression/Datasets/Salary_Data.csv")
+df = pd.read_csv("../Datasets/Salary_Data.csv")
 
 """ Pre-processing """
 # Prints top 3 rows and x columns.
@@ -41,7 +41,7 @@ rhianna = LinearRegression()  # Create model.
 rhianna.fit(x_train, y_train)
 pred = rhianna.predict(x_test)
 
-pred = rhianna.predict([[200]])  # Predict 20 years. 2D array, [*[*values*]*]
+pred = rhianna.predict([[20]])  # Predicting salary based on 20 years experience. 2D array, [*[*values*]*]
 print(pred)
 
 # print(x_test[0], pred[0], y_test[0])
