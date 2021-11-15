@@ -24,7 +24,7 @@ df = pd.read_csv("../Datasets/Salary_Data.csv")
 
 """ Modelling/Machine learning """
 x = df.iloc[:, :-1].values  # Return years experience. Code == All rows except last one.
-y = df.iloc[:, -1].values
+y = df.iloc[:, -1].values   # Return salary.
 
 # Split dataset.
 x_train, x_test, y_train, y_test = train_test_split(x, y, train_size=0.8, random_state=69)
