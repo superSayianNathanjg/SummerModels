@@ -32,7 +32,7 @@ susan = LinearRegression()  # Create model.
 susan.fit(x_train, y_train)  # Fit training values to model.
 pred = susan.predict(x_test)
 
-# plt.plot(x_test, pred)
+plt.plot(x_test, pred)
 plt.scatter(x_test, pred, color='r')
 plt.show()
 
