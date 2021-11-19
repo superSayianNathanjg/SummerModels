@@ -1,5 +1,7 @@
 """
 
+*** Support Vector Machine ***
+
 Model:
 - Fit_transform = used for training.
 - Fit = used for testing, y will not know values from training.
@@ -9,7 +11,7 @@ Support Vector Machines
 - https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/
 - Support vectors => Are only points that interact with hyperplane.
 
-- If dataset is not linearably separable, then you cannot use SVM, but what if you changed dimensions of graph?
+- If dataset is not separable linearly, then you cannot use SVM, but what if you changed dimensions of graph?
 - Maybe it's possible on a 3d plane?
 - Hyperplane intersects
 

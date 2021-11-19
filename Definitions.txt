@@ -1,0 +1,15 @@
+""" Definitions for various terms """
+
+Models:
+    - Linear Regression
+    - Multi and Polynomial Regression
+    - Support Vector Machine:
+    - Decision Tree
+
+Random Forest
+
+
+Cramer's V: Finding correlations between two categorical features. Example, is age and gender (both categorical) correlated?
+
+Mean Absolute Average:
+
