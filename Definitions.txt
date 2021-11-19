@@ -6,7 +6,12 @@ Models:
     - Support Vector Machine:
     - Decision Tree
 
-Random Forest
+Random Forest:
+
+Ensemble learning:
+    - Parallel combination (Random forest)
+    - Sequential combination (Adaboost, XGboost)
+    - Sequential and parallel
 
 
 Cramer's V: Finding correlations between two categorical features. Example, is age and gender (both categorical) correlated?
