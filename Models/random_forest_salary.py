@@ -1,3 +1,9 @@
+"""
+
+ *** Random Forest ***
+
+"""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,7 +18,7 @@ df = pd.read_csv("../Datasets/Position_Salaries.csv")
 x = df.iloc[:, 1:-1].values
 y = df.iloc[:, -1].values
 
-ruby = RandomForestRegressor(n_estimators=5, random_state=69)
+ruby = RandomForestRegressor(n_estimators=1000, random_state=69)
 ruby.fit(x, y)
 pred = ruby.predict([[10]])
 print(pred)
