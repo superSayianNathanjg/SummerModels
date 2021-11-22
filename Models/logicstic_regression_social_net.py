@@ -22,39 +22,10 @@
     - Age and estimated salary values have different rages.
     Need to do feature scaling so they use the same range.
 """
-import math
 
 import pandas as pd
 import numpy as np
 from matplotlib import pyplot as plt
-
-
-def val(tp, fn, fp, tn):
-    from math import sqrt
-    # --- Recall (senstivity) and Specificity
-    recall = tp / (tp + fn)
-    specificity = tn / (tn + fp)
-
-    # --- Precision
-    precision = tp / (tp + fp)
-
-    # --- Accuracy
-    accuracy = (tp + tn) / (tp + tn + fp + fn)
-
-    # --- F-1 Score
-    a = 1 / precision
-    b = 1 / recall
-    f1 = 2 / (a + b)
-
-    # --- mcc
-    x = (tp * tn) - (fp * fn)
-    y = sqrt((tp + fp)*(tp + fn)*(tn + fp) * (tn + fn))
-    mcc = x / y
-
-    # --- Youdens J statistic
-    j = (recall + specificity) - 1  # J = recall + specificity -1
-    return recall, specificity, accuracy, mcc, f1, j
-
 
 # Import dataset
 df = pd.read_csv("../Datasets/Social_Network_Ads.csv")
@@ -89,9 +60,13 @@ pred = linda.predict(sc.transform([[47, 80000]]))
 print(pred)
 
 """ Step 4) Evaluation """
+# If target is binary, use ravel. If not binary then manually define confusion matrix.
 from sklearn.metrics import confusion_matrix
+import Helpers.val as v
+
+
 tn, fp, fn, tp = confusion_matrix(y_true=y_test, y_pred=linda.predict(x_test)).ravel()
-recall, specificity, accuracy, mcc, f1, j = val(tp, fn, fp, tn)
+recall, specificity, accuracy, mcc, f1, j = v.val(tp, fn, fp, tn)
 print('Recall is %.2f' % recall)
 print('Specificity is %.2f' % specificity)
 print('Accuracy is %.2f' % accuracy)
@@ -99,3 +74,7 @@ print('F-1 is %.2f' % f1)
 print('MCC is %.2f' % mcc)
 print('Youdens J statistic is %.2f' % j)
 
+# Most real world datasets are imbalanced so most likely use MCC to imbalance datasets.
+#  Recall most important metric.
+#  Specificity => 2
+#  Precision
