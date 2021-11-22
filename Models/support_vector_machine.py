@@ -72,6 +72,7 @@ svr.fit(x, y)
 """
 pred = svr.predict(selena_x.transform([[9.5]]))
 
+""" Step 3) Visualisation """
 pred = pred.reshape(-1, 1)
 pred = selena_y.inverse_transform(pred)   # Result is incorrect, need to inverse result.
 print(pred)
