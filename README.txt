@@ -13,6 +13,9 @@ Models completed so far:
     2. Multiple and Polynomial Regression.
     3. Support Vector Machine - Using RBF kernel.
     4. Decision Tree.
+    5. Random Forest.
+    6. Logistic Regression.
+    7. K Nearest Neighbours.
 
 Approaches:
    1. Individual models:
