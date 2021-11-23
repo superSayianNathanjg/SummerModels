@@ -1,9 +1,12 @@
+:sunglasses: Summer models :sunglasses:
+Learning and building multiple machine and deep learning models with a variety of datasets.
+
 Key points:
 * Deep learning > Machine learning
 * Understanding pre-processing > Implementing models
 * Must find relations between features
 
-Summer learning building multiple machine and deep learning models with a variety of datasets.
+
 
 Models completed so far:
     1. Linear Regression.
