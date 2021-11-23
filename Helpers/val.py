@@ -17,7 +17,7 @@ def val(tp, fn, fp, tn):
 
     # --- mcc
     x = (tp * tn) - (fp * fn)
-    y = sqrt((tp + fp)*(tp + fn)*(tn + fp) * (tn + fn))
+    y = sqrt((tp + fp) * (tp + fn) * (tn + fp) * (tn + fn))
     mcc = x / y
 
     # --- Youdens J statistic
