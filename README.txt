@@ -11,11 +11,12 @@ Key points:
 Models completed so far:
     1. Linear Regression.
     2. Multiple and Polynomial Regression.
-    3. Support Vector Machine - Using RBF kernel.
+    3. Support Vector Machine (Regression) - Using RBF kernel.
     4. Decision Tree.
     5. Random Forest.
     6. Logistic Regression.
     7. K Nearest Neighbours.
+    8. Support Vector Machine (Classification) - RBF.
 
 Approaches:
    1. Individual models:
