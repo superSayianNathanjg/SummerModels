@@ -17,6 +17,7 @@ Models completed so far:
     6. Logistic Regression.
     7. K Nearest Neighbours.
     8. Support Vector Machine (Classification) - RBF.
+    9. Naive Bayes.
 
 Approaches:
    1. Individual models:
