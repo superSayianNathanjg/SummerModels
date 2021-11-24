@@ -9,10 +9,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestRegressor
 
-df = pd.read_csv("../Datasets/Position_Salaries.csv")
+df = pd.read_csv("../../Datasets/Position_Salaries.csv")
 
 """ Step 1) Pre-processing """
-df = pd.read_csv("../Datasets/Position_Salaries.csv")
+df = pd.read_csv("../../Datasets/Position_Salaries.csv")
 
 """ Step 2) Modelling """
 x = df.iloc[:, 1:-1].values

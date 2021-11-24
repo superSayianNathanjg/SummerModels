@@ -1,13 +1,15 @@
 """
- Support Vector Machine - Classification Version
 
+ # KNN Nearest Neighbours.
+    Using the social network ads.
 """
 import pandas as pd
 
-# Import dataset
-from sklearn.metrics import confusion_matrix
+import numpy as np
+from matplotlib import pyplot as plt
 
-df = pd.read_csv("../Datasets/Social_Network_Ads.csv")
+# Import dataset
+df = pd.read_csv("../../Datasets/Social_Network_Ads.csv")
 
 """ Step1) Pre-processing """
 # print(df.head())  # check for null values.
@@ -29,16 +31,19 @@ sc = StandardScaler()
 x_train = sc.fit_transform(x_train)
 x_test = sc.transform(x_test)  # DO NOT USE FIT.TRANSFORM as you don't want test data to know train values.
 
-from sklearn.svm import SVC
+from sklearn.neighbors import KNeighborsClassifier
 
-selena_williams = SVC(kernel="rbf")
-selena_williams.fit(x_train, y_train)
+# KNN metric, default = 'minkowski'
+# p = 1 => manhattan distance
+# p = 2 => Euclidean distance
+katy_perry = KNeighborsClassifier(n_neighbors=5, p=2, metric='minkowski')  # Euclidean
+katy_perry.fit(x_train, y_train)
 
-
-""" Step 3) Evaluation """
-# pred = selena_williams.predict(sc.transform([[30, 80000]]))
+from sklearn.metrics import confusion_matrix
 import Helpers.val as v
-tn, fp, fn, tp = confusion_matrix(y_true=y_test, y_pred=selena_williams.predict(x_test)).ravel()  # Test set analysis.
+
+pred = katy_perry.predict(sc.transform([[30, 78000]]))  # For prediction with custom values, do this way.
+tn, fp, fn, tp = confusion_matrix(y_true=y_test, y_pred=katy_perry.predict(x_test)).ravel()  # Test set analysis.
 recall, specificity, accuracy, mcc, f1, j = v.val(tp, fn, fp, tn)
 print('Recall is %.2f' % recall)
 print('Specificity is %.2f' % specificity)
@@ -47,16 +52,6 @@ print('F-1 is %.2f' % f1)
 print('MCC is %.2f' % mcc)
 print('Youdens J statistic is %.2f' % j)
 
-cn = confusion_matrix(y_true=y_test, y_pred=selena_williams.predict(x_test))
+cn = confusion_matrix(y_true=y_test, y_pred=katy_perry.predict(x_test))
 print(cn)  # # Print confusion matrix
-# print(pred)  # Print custom prediction.
-
-
-""" Evaluation Results 
-Kernel choice: RBF => recall .96 and Linear = .68 
-RBF false negatives = 1, linear = 9 false negatives. 
-
-
-Question: How can you determine which kernel is best? 
-    - Model and create all models and compare results to determine best kernel. 
-"""
+print(pred)  # Print custom prediction.

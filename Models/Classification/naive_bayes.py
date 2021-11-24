@@ -18,7 +18,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB
 from Helpers import val as v
 from sklearn.metrics import confusion_matrix
-df = pd.read_csv("../Datasets/Social_Network_Ads.csv")
+df = pd.read_csv("../../Datasets/Social_Network_Ads.csv")
 
 """ Step 1) """
 x = df.iloc[:, :-1].values

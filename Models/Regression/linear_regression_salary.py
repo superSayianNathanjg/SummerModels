@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_absolute_error
 
 #  Using dataset https://www.kaggle.com/ashok4kaggle/salary-prediction-with-sklearn
-df = pd.read_csv("../Datasets/Salary_Data.csv")
+df = pd.read_csv("../../Datasets/Salary_Data.csv")
 
 """ Step 1) Pre-processing """
 # Prints top 3 rows and x columns.

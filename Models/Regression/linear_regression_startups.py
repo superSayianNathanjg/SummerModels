@@ -5,7 +5,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
 
-df = pd.read_csv("../Datasets/50_Startups.csv")
+df = pd.read_csv("../../Datasets/50_Startups.csv")
 
 """ Step 1) Pre-processing """
 pd.set_option('display.max_columns', len(df.columns))
@@ -32,7 +32,7 @@ susan = LinearRegression()  # Create model.
 susan.fit(x_train, y_train)  # Fit training values to model.
 pred = susan.predict(x_test)
 
-# plt.plot(x_test, pred)
+plt.plot(x_test, pred)
 plt.scatter(x_test, pred, color='r')
 plt.show()
 

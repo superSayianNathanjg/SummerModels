@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
 
 # Read dataset in.
-df = pd.read_csv("../Datasets/Position_Salaries.csv")
+df = pd.read_csv("../../Datasets/Position_Salaries.csv")
 
 # Visualise data.
 # plt.scatter(df.Level, df.Salary)

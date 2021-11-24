@@ -28,7 +28,7 @@ from sklearn.tree import DecisionTreeRegressor  # Import Decision Tree
 from sklearn import tree
 
 """ Step 1) Dataset and Pre-processing """
-df = pd.read_csv("../Datasets/Position_Salaries.csv")
+df = pd.read_csv("../../Datasets/Position_Salaries.csv")
 
 """ Step 2) Modelling """
 x = df.iloc[:, 1:-1].values

@@ -36,7 +36,7 @@ from sklearn.metrics import mean_absolute_error
 from sklearn.preprocessing import StandardScaler
 
 """ Step 1) Pre-processing """
-df = pd.read_csv("../Datasets/Position_Salaries.csv")
+df = pd.read_csv("../../Datasets/Position_Salaries.csv")
 
 """ Step 2) Modelling """
 x = df.iloc[:, 1:-1].values
@@ -74,5 +74,5 @@ pred = svr.predict(selena_x.transform([[9.5]]))
 
 """ Step 3) Visualisation """
 pred = pred.reshape(-1, 1)
-pred = selena_y.inverse_transform(pred)   # Result is incorrect, need to inverse result.
+pred = selena_y.inverse_transform(pred)  # Result is incorrect, need to inverse result.
 print(pred)

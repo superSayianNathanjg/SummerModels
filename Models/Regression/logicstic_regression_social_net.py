@@ -28,7 +28,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 # Import dataset
-df = pd.read_csv("../Datasets/Social_Network_Ads.csv")
+df = pd.read_csv("../../Datasets/Social_Network_Ads.csv")
 
 """ Step1) Pre-processing """
 # print(df.head())  # check for null values.
