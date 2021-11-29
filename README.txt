@@ -18,6 +18,7 @@ Models completed so far:
     7. K Nearest Neighbours.
     8. Support Vector Machine (Classification) - RBF.
     9. Naive Bayes.
+    10. Decision Tree Classification.
 
 Approaches:
    1. Individual models:
