@@ -4,6 +4,8 @@ Models:
     - Linear Regression
     - Multi and Polynomial Regression
     - Support Vector Machine:
+        Takes (x,y) and outputs hyperplace (in 2D this is just a line), that separates the inputs. Line is called a "decision boundary". 
+        https://monkeylearn.com/blog/introduction-to-support-vector-machines-svm/
     - Decision Tree
 
 Random Forest:
